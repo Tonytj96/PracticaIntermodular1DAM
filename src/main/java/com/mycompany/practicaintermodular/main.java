@@ -4,6 +4,8 @@
  */
 package com.mycompany.practicaintermodular;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -26,21 +28,350 @@ public class main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jButtonMercurio = new javax.swing.JButton();
+        jButtonVenus = new javax.swing.JButton();
+        jButtonTierra = new javax.swing.JButton();
+        jButtonMarte = new javax.swing.JButton();
+        jButtonJupiter = new javax.swing.JButton();
+        jButtonSaturno = new javax.swing.JButton();
+        jButtonUrano = new javax.swing.JButton();
+        jButtonNeptuno = new javax.swing.JButton();
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/SOL2r.png"))); // NOI18N
+        jLabel1.setText("SOL");
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setText("tipo de estrella");
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel3.setText("Temperatura");
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel4.setText("Distancia");
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel5.setText("null");
+
+        jLabel6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel6.setText("Composicion");
+
+        jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel7.setText("Radio");
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel8.setText("null");
+
+        jLabel9.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel9.setText("null");
+
+        jLabel10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel10.setText("null");
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel11.setText("null");
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel12.setText("PRACTICA INTERMODULAR-SISTEMA SOLAR");
+
+        jButtonMercurio.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonMercurio.setText("Mercurio");
+        jButtonMercurio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMercurioMouseClicked(evt);
+            }
+        });
+        jButtonMercurio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMercurioActionPerformed(evt);
+            }
+        });
+
+        jButtonVenus.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonVenus.setText("Venus");
+        jButtonVenus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonVenusMouseClicked(evt);
+            }
+        });
+        jButtonVenus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVenusActionPerformed(evt);
+            }
+        });
+
+        jButtonTierra.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonTierra.setText("Tierra");
+        jButtonTierra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonTierraMouseClicked(evt);
+            }
+        });
+        jButtonTierra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTierraActionPerformed(evt);
+            }
+        });
+
+        jButtonMarte.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonMarte.setText("Marte");
+        jButtonMarte.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonMarteMouseClicked(evt);
+            }
+        });
+
+        jButtonJupiter.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonJupiter.setText("Jupiter");
+        jButtonJupiter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonJupiterMouseClicked(evt);
+            }
+        });
+        jButtonJupiter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJupiterActionPerformed(evt);
+            }
+        });
+
+        jButtonSaturno.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonSaturno.setText("Saturno");
+        jButtonSaturno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonSaturnoMouseClicked(evt);
+            }
+        });
+        jButtonSaturno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSaturnoActionPerformed(evt);
+            }
+        });
+
+        jButtonUrano.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonUrano.setText("Urano");
+        jButtonUrano.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonUranoMouseClicked(evt);
+            }
+        });
+        jButtonUrano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUranoActionPerformed(evt);
+            }
+        });
+
+        jButtonNeptuno.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jButtonNeptuno.setText("Neptuno");
+        jButtonNeptuno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonNeptunoMouseClicked(evt);
+            }
+        });
+        jButtonNeptuno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNeptunoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 357, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(152, 152, 152)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonMercurio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonTierra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonJupiter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonUrano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonVenus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonMarte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonSaturno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonNeptuno))
+                .addGap(123, 123, 123))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(153, 153, 153)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 289, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(227, 227, 227)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel11)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(138, 138, 138)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonMercurio)
+                                    .addComponent(jButtonVenus))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonTierra)
+                                    .addComponent(jButtonMarte))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonJupiter)
+                                    .addComponent(jButtonSaturno))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonNeptuno)
+                                    .addComponent(jButtonUrano)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonMercurioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMercurioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMercurioActionPerformed
+
+    private void jButtonVenusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVenusActionPerformed
+        // TODO add your handling code here:
+         Venus ventana=new Venus();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonVenusActionPerformed
+
+    private void jButtonTierraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTierraActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonTierraActionPerformed
+
+    private void jButtonMercurioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMercurioMouseClicked
+        
+       Mercurio ventana=new Mercurio();
+        ventana.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButtonMercurioMouseClicked
+
+    private void jButtonVenusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonVenusMouseClicked
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButtonVenusMouseClicked
+
+    private void jButtonTierraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTierraMouseClicked
+        // TODO add your handling code here:
+         Tierra ventana=new Tierra();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonTierraMouseClicked
+
+    private void jButtonMarteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMarteMouseClicked
+        // TODO add your handling code here:
+         Marte ventana=new Marte();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonMarteMouseClicked
+
+    private void jButtonJupiterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonJupiterMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonJupiterMouseClicked
+
+    private void jButtonSaturnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonSaturnoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSaturnoMouseClicked
+
+    private void jButtonUranoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonUranoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonUranoMouseClicked
+
+    private void jButtonNeptunoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonNeptunoMouseClicked
+        // TODO add your handling code here:
+        
+        
+        
+    }//GEN-LAST:event_jButtonNeptunoMouseClicked
+
+    private void jButtonNeptunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNeptunoActionPerformed
+        // TODO add your handling code here:
+        Neptuno ventana=new Neptuno();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonNeptunoActionPerformed
+
+    private void jButtonJupiterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJupiterActionPerformed
+        // TODO add your handling code here:
+         Jupiter ventana=new Jupiter();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonJupiterActionPerformed
+
+    private void jButtonSaturnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaturnoActionPerformed
+        // TODO add your handling code here:
+        Saturno ventana=new Saturno();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonSaturnoActionPerformed
+
+    private void jButtonUranoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUranoActionPerformed
+        // TODO add your handling code here:
+        Urano ventana=new Urano();
+        ventana.setVisible(true);
+    }//GEN-LAST:event_jButtonUranoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +409,27 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonJupiter;
+    private javax.swing.JButton jButtonMarte;
+    private javax.swing.JButton jButtonMercurio;
+    private javax.swing.JButton jButtonNeptuno;
+    private javax.swing.JButton jButtonSaturno;
+    private javax.swing.JButton jButtonTierra;
+    private javax.swing.JButton jButtonUrano;
+    private javax.swing.JButton jButtonVenus;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
