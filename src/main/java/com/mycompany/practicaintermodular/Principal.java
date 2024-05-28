@@ -17,13 +17,12 @@ public class Principal extends javax.swing.JFrame {
      */
     public  Principal() {
         initComponents();
-       
+        Satelite conexionsatelite=new Satelite();
+       String[] datosLuna=conexionsatelite.conectarConsultaLuna();
+         jltipoestrella.setText(datosLuna[5]);
         
         
-       Estrella conexionsol=new Estrella();
-       String[] datosSol=conexionsol.conectarConsultaEstrella();
-         jltipoestrella.setText(datosSol[4]);
-        
+      
         
     }
 
