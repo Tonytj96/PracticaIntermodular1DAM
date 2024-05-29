@@ -53,16 +53,16 @@
                           <Component id="jLabel4" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jltipoestrella" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jltemperatura" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jldistancia" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="jlcomposicion" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="jlradio" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jltipoestrella" pref="128" max="32767" attributes="0"/>
+                          <Component id="jltemperatura" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jldistancia" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jlcomposicion" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jlradio" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">

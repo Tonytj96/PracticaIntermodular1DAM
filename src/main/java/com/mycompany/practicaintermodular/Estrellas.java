@@ -1,3 +1,8 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.practicaintermodular;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -5,22 +10,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  *
  * @author Usuario
  */
-public class Estrella {
-    // Configuración de la conexión a la base de datos MySQL
+public class Estrellas {
+     // Configuración de la conexión a la base de datos MySQL
     String url = "jdbc:mysql://localhost:3306/practica_intermodular";
     String usuario = "root";
-    String contraseña = "Med@c";
+    String contraseña = "";
 // Sentencias SQL  consulta por planeta
-    String sqlsol = "SELECT*FROM Estrella WHERE NOMBRE='Sol'";
+    String sqlsol = "SELECT * FROM Estrella WHERE NOMBRE='Sol'";
     public String[] conectarConsultaEstrella() {
         //Crear array
         String arraySol[] = new String[7];
@@ -37,7 +37,7 @@ public class Estrella {
                 arraySol[2] = resultados.getString("radio_km");
                 arraySol[3] = resultados.getString("temperatura_superficial");
                 arraySol[4] = resultados.getString("tipo");
-                arraySol[5] = resultados.getString("distacia_tierra");
+                arraySol[5] = resultados.getString("distancia_tierra");
                 arraySol[6] = resultados.getString("composicion");
                 
 

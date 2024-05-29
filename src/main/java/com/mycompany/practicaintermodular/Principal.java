@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author Usuario
  */
 public class Principal extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form main
      */
@@ -20,9 +20,15 @@ public class Principal extends javax.swing.JFrame {
         Satelite conexionsatelite=new Satelite();
        String[] datosLuna=conexionsatelite.conectarConsultaLuna();
          jltipoestrella.setText(datosLuna[5]);
+         Estrellas estrellas=new Estrellas();
+         String []datosEstrella=estrellas.conectarConsultaEstrella();
+        jltipoestrella.setText(datosEstrella[4]);
+        jltemperatura.setText(datosEstrella[3]);
+        jldistancia.setText(datosEstrella[5]);
+        jlradio.setText(datosEstrella[2]);
+        jlcomposicion.setText(datosEstrella[6]);
+        Bases b = new Bases();
         
-        
-      
         
     }
 
@@ -218,13 +224,13 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jltipoestrella, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jltemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jldistancia, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlcomposicion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlradio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(152, 152, 152)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jltipoestrella, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(jltemperatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jldistancia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlcomposicion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlradio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(64, 64, 64)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -302,28 +308,40 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonMercurioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMercurioActionPerformed
-       Bases conexion=new Bases();
-       String[] datosMercurio=conexion.conectarConsultaMercurio();
+       Bases conexion = new Bases();
+    String[] datosMercurio = conexion.conectarConsulta(conexion.sqlmercurio);
+    PlanetaFrame frame = new PlanetaFrame(datosMercurio);
+    frame.setVisible(true);
+    
         
         
         
     }//GEN-LAST:event_jButtonMercurioActionPerformed
 
     private void jButtonVenusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVenusActionPerformed
-        // TODO add your handling code here:
-         Venus ventana=new Venus();
-        ventana.setVisible(true);
+        Bases conexion = new Bases();
+    String[] datosVenus = conexion.conectarConsulta(conexion.sqlvenus);
+    PlanetaFrame frame = new PlanetaFrame(datosVenus);
+    frame.setVisible(true);
+      
+        
+        
+        
     }//GEN-LAST:event_jButtonVenusActionPerformed
 
     private void jButtonTierraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTierraActionPerformed
-        // TODO add your handling code here:
+         Bases conexion = new Bases();
+    String[] datosTierra = conexion.conectarConsulta(conexion.sqltierra);
+    PlanetaFrame frame = new PlanetaFrame(datosTierra);
+    frame.setVisible(true);
+    
         
     }//GEN-LAST:event_jButtonTierraActionPerformed
 
     private void jButtonMercurioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMercurioMouseClicked
         
-       Mercurio ventana=new Mercurio();
-        ventana.setVisible(true);
+       //Mercurio ventana=new Mercurio();
+      //  ventana.setVisible(true);
         
         
     }//GEN-LAST:event_jButtonMercurioMouseClicked
@@ -336,14 +354,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButtonTierraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonTierraMouseClicked
         // TODO add your handling code here:
-         Tierra ventana=new Tierra();
-        ventana.setVisible(true);
+       
     }//GEN-LAST:event_jButtonTierraMouseClicked
 
     private void jButtonMarteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonMarteMouseClicked
         // TODO add your handling code here:
-         Marte ventana=new Marte();
-        ventana.setVisible(true);
+        
     }//GEN-LAST:event_jButtonMarteMouseClicked
 
     private void jButtonJupiterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonJupiterMouseClicked
@@ -366,34 +382,46 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonNeptunoMouseClicked
 
     private void jButtonNeptunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNeptunoActionPerformed
-        // TODO add your handling code here:
-        Neptuno ventana=new Neptuno();
-        ventana.setVisible(true);
+      Bases conexion = new Bases();
+    String[] datosNeptuno = conexion.conectarConsulta(conexion.sqlneptuno);
+    PlanetaFrame frame = new PlanetaFrame(datosNeptuno);
+    frame.setVisible(true);
     }//GEN-LAST:event_jButtonNeptunoActionPerformed
 
     private void jButtonJupiterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJupiterActionPerformed
-        // TODO add your handling code here:
-         Jupiter ventana=new Jupiter();
-        ventana.setVisible(true);
+         Bases conexion = new Bases();
+    String[] datosJupiter = conexion.conectarConsulta(conexion.sqljupiter);
+    PlanetaFrame frame = new PlanetaFrame(datosJupiter);
+    frame.setVisible(true);
+    
+    
+    
+    
+    
+    
+    
     }//GEN-LAST:event_jButtonJupiterActionPerformed
 
     private void jButtonSaturnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaturnoActionPerformed
-        // TODO add your handling code here:
-        Saturno ventana=new Saturno();
-        ventana.setVisible(true);
+        Bases conexion = new Bases();
+    String[] datosSaturno = conexion.conectarConsulta(conexion.sqlsaturno);
+    PlanetaFrame frame = new PlanetaFrame(datosSaturno);
+    frame.setVisible(true);
     }//GEN-LAST:event_jButtonSaturnoActionPerformed
 
     private void jButtonUranoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUranoActionPerformed
-        // TODO add your handling code here:
-        Urano ventana=new Urano();
-        ventana.setVisible(true);
+        Bases conexion = new Bases();
+    String[] datosUrano = conexion.conectarConsulta(conexion.sqlurano);
+    PlanetaFrame frame = new PlanetaFrame(datosUrano);
+    frame.setVisible(true);
     }//GEN-LAST:event_jButtonUranoActionPerformed
 
     private void jButtonMarteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMarteActionPerformed
                                                       
-       Bases conexion=new Bases();
-       String[] datosMarte=conexion.conectarConsultaMarte();
-      // jLabel.setText(datosMarte[0]);
+       Bases conexion = new Bases();
+    String[] datosMarte = conexion.conectarConsulta(conexion.sqlmarte);
+    PlanetaFrame frame = new PlanetaFrame(datosMarte);
+    frame.setVisible(true);
     }//GEN-LAST:event_jButtonMarteActionPerformed
 
     /**
@@ -431,7 +459,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
-
+    Satelites sstelite;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonJupiter;
     private javax.swing.JButton jButtonMarte;
